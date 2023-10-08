@@ -3,7 +3,7 @@
 # vi: set ft=ruby :
 
 VM_NAME = 'bluefly'
-VM_USER = 'bluefly'
+VM_USER = 'vagrant'
 MAC_USER = 'andreasbigger'
 
 Vagrant.configure("2") do |config|
