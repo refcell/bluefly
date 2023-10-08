@@ -2,25 +2,22 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-VM_NAME = 'svim'
-VM_USER = 'vagrant'
+VM_NAME = 'bluefly'
+VM_USER = 'bluefly'
 MAC_USER = 'andreasbigger'
-HOST_PATH = '/Users/' + MAC_USER + '/.config/' + VM_NAME
-GUEST_PATH = '/home/' + VM_USER + '/' + VM_NAME
-
-# # VM Port use NAT instead of DHCP
-# VM_PORT = 8080
 
 Vagrant.configure("2") do |config|
-  # config.vm.box = VAGRANT_BOX
+  config.vm.provision "shell", inline: "echo \"Welcome to BlueFly\""
 
-  config.vm.hostname = VM_NAME
-  config.vm.synced_folder HOST_PATH, GUEST_PATH
-  config.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
-  config.vm.provider "docker" do |d|
-    d.build_dir = "."
-    d.remains_running = true
-    d.has_ssh = true
+  config.vm.define "lvim" do |lvim|
+    lvim.vm.hostname = VM_NAME
+    lvim.vm.synced_folder './lvim', '/home/' + VM_USER + '/lvim'
+    lvim.vm.synced_folder '.', '/home/' + VM_USER + '', disabled: true
+    lvim.vm.provider "docker" do |d|
+      d.build_dir = "lvim"
+      d.remains_running = true
+      d.has_ssh = true
+    end
   end
 
   # # Port forwarding — uncomment this to use NAT instead of DHCP
