@@ -8,8 +8,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update -y
 RUN apt-get install -y --no-install-recommends ssh sudo
 
-# Install neovim
-RUN apt-get install -y neovim
+# Install some nice to have utilities
+RUN apt-get install -y neovim \
+    btop \
+    nodejs \
+    build-essential \
+    curl
 
 
 # Create the vagrant user

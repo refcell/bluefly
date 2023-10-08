@@ -1,2 +1,3 @@
-# svim
+# lvim
+
 Neovim From Scratch
