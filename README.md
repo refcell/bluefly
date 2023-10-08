@@ -1,4 +1,4 @@
-### https://github.com/refcell/bluefly/labels/bluefly • https://github.com/refcell/bluefly/labels/neovim https://github.com/refcell/bluefly/labels/catppuccin https://github.com/refcell/bluefly/labels/alacritty
+### https://github.com/refcell/bluefly/labels/bluefly • https://github.com/refcell/bluefly/labels/nvim https://github.com/refcell/bluefly/labels/catppuccin https://github.com/refcell/bluefly/labels/alacritty
 
 `bluefly` is a one-shot [Vagrant][vagrant-url] engine for bootstrapping batteries-included development environments.
 
