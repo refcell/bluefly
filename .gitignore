@@ -1,6 +1,9 @@
 # Compiled Lua sources
 luac.out
 
+# Ignore vagrant output
+.vagrant
+
 # luarocks build files
 *.src.rock
 *.zip
