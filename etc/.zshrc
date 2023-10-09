@@ -98,6 +98,12 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.profile
 source ~/.zshenv
 
+ # Nix
+ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+ fi
+ # End Nix
+
 eval "$(~/.cargo/bin/rtx activate zsh)"
 
 [[ -s "/Users/andreasbigger/.gvm/scripts/gvm" ]] && source "/Users/andreasbigger/.gvm/scripts/gvm"

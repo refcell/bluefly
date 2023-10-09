@@ -1,9 +1,17 @@
 
-all: up
+avim: avim-up avim-ssh
 
-up:
-	vagrant up
-.PHONY: up
+lvim: lvim-up lvim-ssh
+
+all: lvim-up avim-up
+
+lvim-up:
+	vagrant up lvim
+.PHONY: lvim-up
+
+avim-up:
+	vagrant up avim
+.PHONY: avim-up
 
 nuke:
 	vagrant destroy --force
@@ -13,6 +21,10 @@ remove:
 	vagrant box remove ubuntu/trusty64
 .PHONY: remove
 
-ssh:
-	vagrant ssh
-.PHONY: ssh
+lvim-ssh:
+	vagrant ssh lvim
+.PHONY: lvim-ssh
+
+avim-ssh:
+	vagrant ssh avim
+.PHONY: avim-ssh
