@@ -93,6 +93,10 @@ RUN curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neov
 RUN chmod +x install.sh
 RUN LV_BRANCH='release-1.3/neovim-0.9' ./install.sh --yes
 
+# Install Nerdfonts
+RUN git clone https://github.com/ronniedroid/getnf.git
+RUN cd getnf && chmod +x ./install.sh && ./install.sh
+
 # Update the PATH
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROOT_PATH=/root
