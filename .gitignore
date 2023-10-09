@@ -1,6 +1,8 @@
 # Compiled Lua sources
 luac.out
 
+.env
+
 # Ignore vagrant output
 .vagrant
 
