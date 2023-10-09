@@ -89,6 +89,7 @@ RUN ./binstall.sh
 RUN cargo install rtx-cli
 
 # Install Astronvim
+RUN git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 RUN git clone --depth 1 https://github.com/refcell/bluefly /root/bluefly
 RUN cp -r /root/bluefly/avim/nvim ~/.config/
 

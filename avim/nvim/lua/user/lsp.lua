@@ -37,12 +37,12 @@ local lsp = {
         },
 
         -- Nomic Solidity --
-        nomic_solidity = {
-            cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
-            root_dir = require("lspconfig.util").root_pattern "foundry.toml",
-            filetypes = { "solidity" },
-            single_file_support = true,
-        },
+        -- nomic_solidity = {
+        --     cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+        --     root_dir = require("lspconfig.util").root_pattern "foundry.toml",
+        --     filetypes = { "solidity" },
+        --     single_file_support = true,
+        -- },
 
         -- Rust Analyzer --
         rust_analyzer = {
