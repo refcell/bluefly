@@ -97,6 +97,9 @@ RUN LV_BRANCH='release-1.3/neovim-0.9' ./install.sh --yes
 RUN git clone https://github.com/ronniedroid/getnf.git
 RUN cd getnf && chmod +x ./install.sh && ./install.sh
 
+# Hush Login
+RUN touch /root/.hushlogin
+
 # Update the PATH
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROOT_PATH=/root

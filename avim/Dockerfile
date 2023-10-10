@@ -97,6 +97,9 @@ RUN cp -r /root/bluefly/avim/nvim ~/.config/
 RUN git clone https://github.com/ronniedroid/getnf.git
 RUN cd getnf && chmod +x ./install.sh && ./install.sh
 
+# Hush Login
+RUN touch /root/.hushlogin
+
 # Update the PATH
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROOT_PATH=/root
