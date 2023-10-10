@@ -41,7 +41,7 @@ RUN apt-get install --no-install-recommends -y \
 
 RUN apt-get install --no-install-recommends -y \
   doxygen fd-find fzf \
-  g++ gettext git gnupg \
+  g++ gettext git gnupg gh \
   libtool libtool-bin locales
 
 RUN apt-get install --no-install-recommends -y \
